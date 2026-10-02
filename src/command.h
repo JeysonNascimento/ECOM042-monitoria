@@ -3,11 +3,11 @@
 
 #include <stddef.h>
 
-struct command {
+typedef struct command {
 	const char *name;
 	int (*execute)(void *ctx);
 	void *ctx;
-};
+} command_t;
 
 int command_execute(const struct command *cmd);
 
