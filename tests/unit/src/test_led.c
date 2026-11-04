@@ -199,14 +199,11 @@ ZTEST(led, test_other_led_does_not_change_phase)
 
 ZTEST(led, test_on_off_toggle_cancel_blink)
 {
+	/* expected = -1: o nivel final nao importa, so precisa ficar parado */
 	static const struct {
 		int (*action)(int led);
 		int expected;
-	} cases[] = {
-		{led_on, 1},
-		{led_off, 0},
-		{led_toggle, -1}, /* -1: so precisa ficar parado */
-	};
+	} cases[] = {{led_on, 1}, {led_off, 0}, {led_toggle, -1}};
 	int counts[NUM_TEST_LEDS];
 	bool hi[NUM_TEST_LEDS], lo[NUM_TEST_LEDS];
 

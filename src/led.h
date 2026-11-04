@@ -3,7 +3,7 @@
  *
  * @brief Modulo de LED: liga, desliga, alterna e pisca N LEDs com
  *        periodos independentes usando um unico k_timer.
-*******************************************************************/
+ *******************************************************************/
 
 #ifndef LED_H_
 #define LED_H_

@@ -2,7 +2,7 @@
  * @file led.c
  *
  * @brief N LEDs independentes multiplexados em um unico k_timer.
-*******************************************************************/
+ *******************************************************************/
 
 #include "led.h"
 
@@ -35,8 +35,8 @@ static const uint32_t pattern_period_ms[LED_PATTERN_COUNT] = {
 
 struct led_state {
 	enum led_pattern pattern;
-	k_ticks_t half_period; 
-	k_ticks_t deadline;    
+	k_ticks_t half_period;
+	k_ticks_t deadline;
 	bool blinking;
 	bool on;
 };
